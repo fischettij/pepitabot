@@ -1,9 +1,12 @@
 .home-pepitabot-container {
   width: 100%;
   height: 100vh;
+  max-width: 1280px;
   position: relative;
   display: flex;
   align-items: center;
+  margin: auto;
+  justify-content: center;
 }
 
 .home-pepitabot-content {
@@ -12,7 +15,7 @@
   position: absolute;
   display: flex;
   flex-direction: column;
-  margin: auto;
+  
 }
 
 .home-pepitabot-greeting {
@@ -22,9 +25,15 @@
  flex-direction: column;
  justify-content: center;
  justify-items: center;
- color: #ffffff
+ color: #ffffff;
+ text-align: center;
 }
 
 .home-pepitabot-greeting label {
   margin-bottom: 10px;
+}
+
+.home-pepitabot-header {
+  width: 50%;
+margin: auto;
 }

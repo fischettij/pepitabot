@@ -5,17 +5,21 @@ import Pepita from './components/Pepita/Pepita';
 import './Home.css';
 
 const Home = ({ history }) => (
-  <div className="home-pepitabot-container">
-    <div className="home-pepitabot-content">
-      <Pepita history={history} />
-      <div className="home-pepitabot-greeting">
-        <Fade opposite>
-          <h1>¡Hola humano!</h1>
-        </Fade>
-        <Fade opposite>
-          <p>Soy Pepita, la paloma mensajera.</p>
-          <p>¿Queres charlar?</p>
-        </Fade>
+  <div className="home-pepitabot-section">
+    <div className="home-pepitabot-container">
+      <div className="home-pepitabot-content">
+        <div className="home-pepitabot-header">
+          <Pepita history={history} />
+          <div className="home-pepitabot-greeting">
+            <Fade opposite>
+              <h1>¡Hola humano!</h1>
+            </Fade>
+            <Fade opposite>
+              <p>Soy Pepita, la paloma mensajera.</p>
+              <p>¿Queres charlar?</p>
+            </Fade>
+          </div>
+        </div>
       </div>
     </div>
   </div>

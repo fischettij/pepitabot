@@ -1,0 +1,26 @@
+.pepita-item-container {
+ display:flex;
+ width: auto;
+ align-items: center;
+ display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.pepita-item-container img{
+  height: 40px;
+ }
+
+
+ .pepita-item-container p{
+  margin: 0px 0px 5px 10px;
+  font-size: 14px;
+  color: #fafafa;
+  background: #434343;
+  padding: 10px;
+  border-radius: 5px;
+  width: fit-content;
+  font-weight: normal;
+  box-sizing: border-box;
+ }
+ 

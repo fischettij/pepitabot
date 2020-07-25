@@ -1,0 +1,27 @@
+.user-item-container {
+  display:flex;
+  justify-content: flex-end;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-right: 10px;
+  align-items: center;
+}
+
+.user-item-container img{
+  padding-left: 10px;
+  height: 40px;
+}
+ 
+ 
+.user-item-container p{
+  margin: 0px 0px 5px 10px;
+  font-size: 14px;
+  color: #fafafa;
+  background: #00b9a0;
+  padding: 10px;
+  border-radius: 5px;
+  width: fit-content;
+  font-weight: normal;
+  box-sizing: border-box;
+}
+  
