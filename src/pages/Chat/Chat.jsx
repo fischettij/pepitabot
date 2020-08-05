@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import './Chat.css';
+import Fade from 'react-reveal/Fade';
 import PepitaItem from './components/PepitaItem/PepitaItem';
 import UserItem from './components/UserItem/UserItem';
 import ImputChat from './components/InputChat/InputChat';
-import Fade from 'react-reveal/Fade';
 
 const firstResponse = (name) => (
   {
