@@ -1,12 +1,19 @@
 /* eslint-disable jsx-a11y/label-has-associated-control, jsx-a11y/control-has-associated-label */
 import React, { useState } from 'react';
+import PropTypes from 'prop-types';
 import './InputChat.css';
 
-const InputChat = () => {
+const InputChat = ({ sendMessage }) => {
   const [inputValue, setInputValue] = useState('');
 
   return (
-    <form className="chatbot-chat-input-container">
+    <form
+      onSubmit={(event) => {
+        event.preventDefault();
+        sendMessage(inputValue);
+      }}
+      className="chatbot-chat-input-container"
+    >
       <input
         aria-label="Chat text input"
         placeholder="Escribi tu nombre"
@@ -17,6 +24,10 @@ const InputChat = () => {
       <button type="submit" />
     </form>
   );
+};
+
+InputChat.propTypes = {
+  sendMessage: PropTypes.func.isRequired,
 };
 
 export default InputChat;

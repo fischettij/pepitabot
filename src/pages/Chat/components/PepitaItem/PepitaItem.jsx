@@ -7,15 +7,17 @@ const PepitaItem = ({ text }) => (
   <div className="pepita-item-container">
     <img src={pepitaAvatar} alt="pepita-avatar" />
     <div className="pepita-item-message">
-      <p>
-        {text}
-      </p>
+      {text.map((msj) => (
+        <p>
+          {msj}
+        </p>
+      ))}
     </div>
   </div>
 );
 
 PepitaItem.propTypes = {
-  text: PropTypes.string.isRequired,
+  text: PropTypes.arrayOf(PropTypes.string).isRequired,
 };
 
 export default PepitaItem;
