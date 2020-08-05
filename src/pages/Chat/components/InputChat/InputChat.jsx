@@ -6,12 +6,15 @@ import './InputChat.css';
 const InputChat = ({ sendMessage }) => {
   const [inputValue, setInputValue] = useState('');
 
+  const submitMessage = (event) => {
+    event.preventDefault();
+    sendMessage(inputValue);
+    setInputValue('');
+  };
+
   return (
     <form
-      onSubmit={(event) => {
-        event.preventDefault();
-        sendMessage(inputValue);
-      }}
+      onSubmit={(event) => submitMessage(event)}
       className="chatbot-chat-input-container"
     >
       <input

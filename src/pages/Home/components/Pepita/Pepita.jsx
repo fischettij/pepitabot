@@ -11,7 +11,7 @@ const Pepita = ({ history }) => {
     animationData,
   };
   return (
-    <div cassName="pepita-container" onClick={() => history.push('/chat')} role="link" aria-hidden="true">
+    <div className="pepita-container" onClick={() => history.push('/chat')} role="link" aria-hidden="true">
       <Lottie
         options={defaultOptions}
       />

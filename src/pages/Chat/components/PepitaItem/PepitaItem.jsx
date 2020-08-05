@@ -8,7 +8,7 @@ const PepitaItem = ({ text }) => (
     <img src={pepitaAvatar} alt="pepita-avatar" />
     <div className="pepita-item-message">
       {text.map((msj) => (
-        <p>
+        <p key={msj}>
           {msj}
         </p>
       ))}

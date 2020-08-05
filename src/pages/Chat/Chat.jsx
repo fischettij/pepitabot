@@ -1,11 +1,27 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './Chat.css';
 import PepitaItem from './components/PepitaItem/PepitaItem';
 import UserItem from './components/UserItem/UserItem';
 import ImputChat from './components/InputChat/InputChat';
 
+const firstResponse = (name) => (
+  {
+    id: 2,
+    emmiter: 'Pepita',
+    msj: [
+      `¡Mucho gusto, ${name}!`,
+      'Mi nombre es Pepita, actualmente soy un bot en desarrollo.',
+      'Tal vez me recuerdes de clases de programación con objetos. Pepita.vola(), ¿te suena?',
+      'Estoy limitada a algunas funciones, pero vamos a poder interactuar un poco.',
+      'Haceme una pregunta de la ListeningStateChangedEvent, y con gusto te respondo',
+    ],
+  }
+);
+
 const Chat = () => {
   let idCounter = 0;
+
+  const [lastMessage, setLastMessage] = useState('');
 
   const [chat, setChat] = useState([
     {
@@ -14,6 +30,15 @@ const Chat = () => {
       msj: ['¡Hola!', '¿Cómo es tu nombre?'],
     },
   ]);
+
+  useEffect(() => {
+    const checkFirstMessage = () => {
+      if (chat.length === 2) {
+        setTimeout(() => setChat([...chat, firstResponse(lastMessage)]), 500);
+      }
+    };
+    checkFirstMessage();
+  }, [lastMessage, chat]);
 
   const getMessage = (text) => {
     idCounter += 1;
@@ -24,7 +49,10 @@ const Chat = () => {
     };
   };
 
-  const sendMessage = (text) => setChat([...chat, getMessage(text)]);
+  const sendMessage = (text) => {
+    setLastMessage(text);
+    setChat([...chat, getMessage(text)]);
+  };
 
   return (
     <div className="chatbot-chat-container">
