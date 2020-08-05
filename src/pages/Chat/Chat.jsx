@@ -3,6 +3,7 @@ import './Chat.css';
 import PepitaItem from './components/PepitaItem/PepitaItem';
 import UserItem from './components/UserItem/UserItem';
 import ImputChat from './components/InputChat/InputChat';
+import Fade from 'react-reveal/Fade';
 
 const firstResponse = (name) => (
   {
@@ -59,9 +60,13 @@ const Chat = () => {
       <div className="chatbot-chat-content">
         <div className="chatbot-chat">
           <div className="chatbot-chat-container-body">
-            {chat.map((message) => (message.emmiter === 'Pepita'
-              ? <PepitaItem key={message.id} text={message.msj} />
-              : <UserItem key={message.id} text={message.msj} />))}
+            {chat.map((message) => (
+              <Fade opposite>
+                {message.emmiter === 'Pepita'
+                  ? <PepitaItem key={message.id} text={message.msj} />
+                  : <UserItem key={message.id} text={message.msj} />}
+              </Fade>
+            ))}
           </div>
           <div className="chatbot-chat-container-input">
             <ImputChat sendMessage={sendMessage} />
