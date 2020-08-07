@@ -7,8 +7,6 @@ cache:
 services:
   - docker
 
-before_install: bash .travis/docker_setup_ssh.sh
-
 before_script: npm run lint
 after_success: bash .travis/docker_and_deploy.sh
 
