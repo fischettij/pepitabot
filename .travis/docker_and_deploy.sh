@@ -5,7 +5,7 @@ if [ "${TRAVIS_BRANCH}" = "master" ] && [ "${TRAVIS_PULL_REQUEST}" = "false" ]; 
     docker build -f docker/Dockerfile -t fischettij/pepitabot .
 
     echo "*** Pushing Docker Containers ***"
-    echo "$DOCKER_TOKEN" docker login --username fischettij
+    echo "$DOCKER_TOKEN" docker login --username fischettij --password-stdin
     docker push fischettij/pepitabot:latest
 
 else
