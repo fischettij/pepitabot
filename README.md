@@ -1,3 +1,4 @@
+[![Build Status](https://travis-ci.com/fischettij/pepitabot.svg?branch=master)](https://travis-ci.com/fischettij/pepitabot)
 # Pepita Bot
 
 ## TL;DR
