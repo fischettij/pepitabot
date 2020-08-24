@@ -14,7 +14,7 @@ const firstResponse = (name) => (
       'Mi nombre es Pepita, actualmente soy un bot en desarrollo.',
       'Tal vez me recuerdes de clases de programación con objetos. Pepita.vola(), ¿te suena?',
       'Estoy limitada a algunas funciones, pero vamos a poder interactuar un poco.',
-      'Haceme una pregunta de la ListeningStateChangedEvent, y con gusto te respondo',
+      'Haceme una pregunta de la lista, y con gusto te respondo (no había ninguna)',
     ],
   }
 );
